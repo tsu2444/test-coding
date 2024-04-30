@@ -1,0 +1,144 @@
+@use "global" as *;
+
+.layout-header {
+  position: fixed;
+  z-index: 900;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.header {
+  height: rem(100);
+  transition: background-color 0.3s;
+  @include mq("md") {
+    height: rem(120);
+  }
+}
+
+.header__inner {
+  padding: 0 rem(25);
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  @include mq("md") {
+    padding: 0 rem(100) 0 rem(40);
+  }
+  @media (min-width: 1350px) {
+    padding: 0 rem(140) 0 rem(80);
+  }
+}
+
+.header__wrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+  @include mq("md") {
+    padding-top: rem(56);
+    align-items: normal;
+  }
+}
+
+.header__logo {
+  aspect-ratio: 160/36;
+  object-fit: contain;
+  width: rem(160);
+  height: rem(36);
+}
+
+.header__logo a {
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.header__logo.header__logo--first img {
+  aspect-ratio: 123 / 31;
+  object-fit: cover;
+}
+
+.header__logo.header__logo--second img {
+  aspect-ratio: 85 / 17;
+  object-fit: cover;
+}
+
+.header__nav {
+  display: block;
+  height: inherit;
+  display: none;
+  @include mq("md") {
+    display: block;
+  }
+}
+
+.header__nav-items {
+  display: flex;
+  height: inherit;
+}
+
+.header__nav-item {
+  height: inherit;
+}
+
+.header__nav-item:not(:first-child) {
+  margin-left: rem(20);
+  @include mq("lg") {
+    margin-left: rem(42);
+  }
+}
+
+.header__nav-item.header__nav-item--contact {
+  display: flex;
+  align-items: center;
+  @include mq("md") {
+    padding-top: rem(64);
+    align-items: normal;
+    margin-left: rem(50);
+  }
+  @media (min-width: 1350px) {
+    margin-left: rem(200);
+  }
+}
+
+.header__nav-item__link {
+  position: relative; /* 親要素を基準に ::after を配置するために必要 */
+  padding-top: rem(71);
+  height: inherit;
+  display: flex;
+  align-items: normal;
+  color: $white_fff;
+  font-size: rem(14);
+  line-height: calc(20 / 14);
+  letter-spacing: 0.02em;
+  font-weight: $regular;
+  text-transform: uppercase;
+}
+
+.header__nav-item__link::after {
+  content: "";
+  position: absolute;
+  width: rem(30);
+  height: rem(2);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: rem(20);
+  opacity: 0;
+  transition: 0.3s opacity;
+  background-color: #fff; /* 追加：背景色を設定 */
+}
+
+.header__nav-item__link:hover::after {
+  opacity: 1;
+}
+
+.header.change-color {
+  background-color: rgba(31, 100, 141, 0.8);
+  transition: background-color 0.3s;
+}

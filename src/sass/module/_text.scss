@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.text {
+  font-size: rem(16);
+}
+
+.text.text--white1 {
+  color: $white_fff;
+  font-family: $second-font-family;
+  font-weight: $regular;
+  line-height: calc(36 / 16);
+  letter-spacing: 0.04em;
+  @include mq("md") {
+    text-align: center;
+    letter-spacing: 0.1em;
+    line-height: calc(58 / 16);
+  }
+}
+
+.text.text--white2 {
+  color: $white_fff;
+  font-weight: $regular;
+  line-height: calc(28 / 16);
+}
+
+.text.text--center {
+  color: $black_333;
+  font-weight: $regular;
+  line-height: calc(28 / 16);
+  @include mq("lg") {
+    text-align: center;
+  }
+}

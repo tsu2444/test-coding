@@ -1,0 +1,108 @@
+@use "global" as *;
+
+.form__wrap {
+  @include mq(md) {
+    display: flex;
+  }
+}
+
+.form__wrap + .form__wrap {
+  margin-top: rem(35);
+  @include mq("md") {
+    margin-top: rem(15);
+  }
+}
+
+.form__label {
+  font-size: rem(16);
+  font-weight: $medium;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.1em;
+  width: 100%;
+  color: $blue_1F648D;
+  @include mq(md) {
+    width: calc((282 / 806) * 100%);
+  }
+}
+
+.form__label.form__label--padding {
+  @include mq("md") {
+    padding-top: rem(9);
+  }
+}
+
+.form__input {
+  margin-top: rem(20);
+  flex-grow: 1;
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.form-input input {
+  padding: rem(8) rem(16);
+  width: 100%;
+  font-size: rem(16);
+  font-weight: $medium;
+  line-height: 1;
+  border-radius: rem(4);
+  border: 1px solid #f0f0f0;
+  appearance: none;
+  background-color: $white_fff;
+  background-image: none;
+}
+
+.form::placeholder {
+  font-size: rem(16);
+  font-weight: $medium;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.1em;
+  color: $gray_EAEAEA;
+}
+
+.form__wrap.form__wrap--split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  @include mq(md) {
+    justify-content: start;
+  }
+}
+
+.form__wrap.form__wrap--center {
+  align-items: center;
+}
+
+.form-input.form-input--name {
+  width: 130px;
+  @include mq("sm") {
+    width: calc((152 / 314) * 100%);
+  }
+  @include mq("md") {
+    width: fit-content;
+    max-width: calc((184 / 806) * 100%);
+  }
+}
+
+.form-input.form-input--name:not(:first-of-type) {
+  margin-left: rem(10);
+  @include mq("md") {
+    margin-left: rem(16);
+  }
+}
+
+.form-input input:focus {
+  border: 1px solid #ccc;
+  box-shadow: none;
+  outline: none;
+}
+
+.form__textarea {
+  margin-top: rem(18);
+  flex-grow: 1;
+  @include mq(md) {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,68 @@
+@use "global" as *;
+
+.contact-policy {
+  margin-top: rem(30);
+  @include mq("md") {
+    margin-top: rem(9);
+    display: flex;
+  }
+}
+
+.contact-policy__title {
+  font-size: rem(16);
+  font-weight: $medium;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.1em;
+  color: $blue_1F648D;
+  @include mq(md) {
+    padding-top: rem(9);
+    width: calc((282 / 806) * 100%);
+  }
+}
+
+.contact-policy__box {
+  margin-top: rem(20);
+  background-color: $white_fff;
+  border-radius: rem(4);
+  padding: rem(21) rem(14) rem(13) rem(16);
+  overflow: scroll;
+  @include mq("md") {
+    margin-top: 0;
+    padding-bottom: 0;
+    width: calc((524 / 806) * 100%);
+  }
+}
+
+.contact-policy__content {
+  padding-right: rem(18);
+  overflow: scroll;
+}
+
+.contact-policy__content::-webkit-scrollbar {
+  width: rem(8); /* スクロールバーの幅 */
+}
+
+.contact-policy__content::-webkit-scrollbar-thumb {
+  background-color: $blue_1F648D; /* スクロールバーのつまみの色 */
+  border-radius: rem(10);
+}
+
+.contact-policy__head {
+  font-size: rem(14);
+  font-weight: $bold;
+  line-height: calc(20 / 14);
+  letter-spacing: 0.1em;
+  color: $black_666;
+}
+
+.contact-policy__text {
+  font-size: rem(12);
+  letter-spacing: 0.1em;
+  font-weight: $regular;
+  line-height: calc(17 / 12);
+  height: rem(170);
+  @include mq("md") {
+    height: rem(120);
+    padding-right: rem(20);
+  }
+}

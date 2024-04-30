@@ -1,0 +1,63 @@
+@use "global" as *;
+
+.contact__layout {
+  margin-top: rem(87);
+  padding: rem(80) 0 rem(72);
+  background-color: $blue_EBF5FF;
+  @include mq("md") {
+    margin-top: rem(79);
+    padding-top: rem(77);
+    padding-bottom: rem(119);
+  }
+}
+
+.contact__inner.inner {
+  @include mq("md") {
+    width: 100%;
+    max-width: rem(856);
+    padding: 0 rem(25);
+  }
+}
+
+.contact__title-sub {
+  margin-top: rem(20);
+}
+
+.contact__title-sub.title__sub {
+  font-size: rem(32);
+}
+
+.contact__text {
+  margin: rem(36) auto 0;
+  max-width: 500px;
+  @include mq("md") {
+    max-width: 600px;
+    margin-top: rem(34);
+  }
+  @include mq("lg") {
+    max-width: 100%;
+  }
+}
+
+.contact__text.text {
+  line-height: calc(28 / 16);
+}
+
+.contact__form {
+  margin: rem(45) auto 0;
+  max-width: 500px;
+  @include mq("md") {
+    margin-top: rem(105);
+    max-width: 700px;
+  }
+  @include mq("lg") {
+    max-width: 100%;
+  }
+}
+
+.contact__form-wrap {
+  margin-top: rem(64);
+  @include mq("md") {
+    margin-top: rem(83);
+  }
+}

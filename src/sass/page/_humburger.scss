@@ -1,0 +1,56 @@
+@use "global" as *;
+
+//hamburger
+
+.header__hamburger {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  position: relative;
+  z-index: 999;
+  width: rem(38);
+  height: inherit;
+  cursor: pointer;
+  transition: 0.3s;
+  @include mq("md") {
+    display: none;
+  }
+}
+
+.header__hamburger span {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: rem(28);
+  height: rem(2);
+  background-color: $white_fff;
+  transition: 0.5s;
+}
+
+.header__hamburger span:nth-of-type(1) {
+  top: rem(-5);
+}
+
+.header__hamburger span:nth-of-type(2) {
+  top: 0;
+}
+
+.header__hamburger span:nth-of-type(3) {
+  top: rem(5);
+}
+
+.header__hamburger.is-open span:nth-of-type(1) {
+  top: rem(2);
+  transform: translateX(-50%) rotate(36deg);
+}
+
+.header__hamburger.is-open span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.header__hamburger.is-open span:nth-of-type(3) {
+  top: rem(-2);
+  transform: translateX(-50%) rotate(-36deg);
+}

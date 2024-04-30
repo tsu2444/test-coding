@@ -1,0 +1,55 @@
+@use "global" as *;
+
+.thanks-top {
+  padding-top: 100px;
+  background-color: $blue_1F648D;
+  @include mq("md") {
+    padding-top: 120px;
+  }
+}
+
+.thanks__inner {
+  background-color: $blue_EBF5FF;
+  padding: rem(100) 0;
+}
+
+.thanks__content {
+  background-color: $white_fff;
+  padding: rem(100) rem(30);
+  @include mq("md") {
+    text-align: center;
+  }
+}
+
+.thanks__title {
+  max-width: 335px;
+  margin: 0 auto;
+  font-size: rem(18);
+  @include mq("md") {
+    max-width: 600px;
+    font-size: rem(32);
+  }
+}
+
+.thanks__text {
+  max-width: 335px;
+  margin: 0 auto;
+  margin-top: rem(30);
+  font-size: rem(16);
+}
+
+.thanks__wrap {
+  margin-top: rem(30);
+}
+
+.thanks__button {
+}
+
+.button {
+}
+
+.button--submit {
+}
+
+.button__link {
+}

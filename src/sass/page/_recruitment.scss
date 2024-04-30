@@ -1,0 +1,107 @@
+@use "global" as *;
+
+.recruitment__layout {
+  margin-top: rem(100);
+  padding-bottom: rem(56);
+  position: relative;
+  @include mq("md") {
+    margin-top: rem(87);
+    padding-bottom: rem(60);
+  }
+}
+
+.recruitment__bg {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  height: calc(100% - 67px);
+  top: rem(67);
+  background-color: $blue_F6F6F8;
+  z-index: -1;
+  @include mq("md") {
+    max-width: rem(1116);
+    padding: 0 rem(20);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.recruitment__title-sub.title__sub {
+  font-size: rem(32);
+  line-height: calc(32 / 27);
+}
+
+.recruitment__title-sub {
+  margin-top: rem(19);
+}
+
+.recruitment__content {
+  margin: rem(56) auto 0;
+  max-width: 500px;
+  @include mq("md") {
+    max-width: 600px;
+    margin: rem(57) auto 0;
+  }
+  @include mq("lg") {
+    max-width: rem(1004);
+  }
+}
+
+.recruitment__list {
+  @include mq("md") {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.recruitment__name {
+  background-color: $blue_1F648D;
+  color: $white_fff;
+  padding: rem(7) rem(16) rem(9);
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  letter-spacing: 0.1em;
+  font-weight: $medium;
+  text-transform: uppercase;
+  @include mq("md") {
+    display: flex;
+    align-items: center;
+    width: calc((154 / 1004) * 100%);
+  }
+}
+
+.recruitment__name:not(:first-child) {
+  margin-top: rem(4);
+}
+
+.recruitment__disc {
+  background-color: $white_fff;
+  padding: rem(10) rem(16) rem(6);
+  font-size: rem(14);
+  line-height: calc(24 / 14);
+  font-weight: $regular;
+  font-family: "Noto Sans JP";
+  @include mq("md") {
+    width: calc((850 / 1004) * 100%);
+  }
+}
+
+.recruitment__disc.recruitment__disc--second {
+  padding-top: rem(18);
+  padding-bottom: rem(12);
+}
+
+.recruitment__disc.recruitment__disc--large {
+  @include mq("md") {
+    padding-top: rem(21);
+    padding-bottom: rem(21);
+  }
+}
+
+.recruitment__disc.recruitment__disc--large23 {
+  @include mq("md") {
+    padding-top: rem(23);
+    padding-bottom: rem(23);
+  }
+}

@@ -1,0 +1,58 @@
+@use "global" as *;
+
+.vision__bg-blue {
+  background-color: $blue_1F648D;
+}
+
+.vision__layout {
+  padding: rem(242) 0 rem(238);
+  position: relative;
+  @include mq("md") {
+    padding: rem(310) 0 ;
+  }
+}
+
+.vision__bg {
+  background-image: url(../../assets/images/mv-sp.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include mq("md") {
+    background-image: url(../../assets/images/mv-pc.jpg);
+  }
+}
+
+.vision__container {
+  text-align: center;
+}
+
+.vision__subtitle {
+  margin-top: rem(33);
+  font-size: rem(28);
+  line-height: calc(42 / 28);
+  color: $white_fff;
+  font-weight: $medium;
+  @include mq("md") {
+    margin-top: rem(21);
+    font-size: rem(40);
+  }
+}
+
+.vision__subtitle span {
+  font-size: rem(20);
+  @include mq("md") {
+    font-size: rem(32);
+  }
+}
+
+.vision__subtitle-en {
+  margin-top: rem(8);
+  font-size: rem(16);
+  line-height: calc(33 / 16);
+  letter-spacing: 0.065em;
+  color: $white_fff;
+  @include mq("md") {
+    margin-top: 0;
+    letter-spacing: 0.13em;
+  }
+}

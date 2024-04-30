@@ -1,0 +1,88 @@
+@use "global" as *;
+
+.form-radio {
+  margin-top: rem(20);
+  display: flex;
+  flex-wrap: wrap;
+  @include mq("md") {
+    margin-top: 0;
+    width: calc((524 / 806) * 100%);
+  }
+}
+
+.form-radio label {
+  display: block;
+  width: calc((100% - 36px) / 2);
+  @include mq(md) {
+    display: inline-block;
+    width: calc((192 / 524) * 100%);
+  }
+}
+
+.form-radio label:nth-child(2n) {
+  margin-left: rem(33);
+  @include mq(md) {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+
+.form-radio label:nth-child(n + 3) {
+  margin-top: rem(16);
+}
+
+.form-radio input {
+  display: none;
+}
+
+.form-radio input + span {
+  color: $black_666;
+  padding: 0 0 0 rem(32);
+  position: relative;
+  display: block;
+  font-size: rem(14);
+  font-weight: $medium;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  @include mq("sm") {
+    font-size: rem(16);
+  }
+  @include mq(md) {
+    display: inline-block;
+  }
+}
+
+.form-radio input + span::before {
+  content: "";
+  width: rem(24);
+  height: rem(24);
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+
+.form-radio input + span::after {
+  content: "";
+  padding: rem(2);
+  width: rem(16);
+  height: rem(16);
+  position: absolute;
+  top: 50%;
+  left: rem(4);
+  transform: translateY(-50%);
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background: $blue_1F648D;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.form-radio input:checked + span::after {
+  opacity: 1;
+}

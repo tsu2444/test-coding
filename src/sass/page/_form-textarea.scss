@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.form-textarea textarea {
+  padding: rem(8) rem(15);
+  width: 100%;
+  height: rem(220);
+  font-size: rem(16);
+  border-radius: rem(4);
+  line-height: calc(24 / 16);
+  letter-spacing: 0.1em;
+  border: 1px solid #f0f0f0;
+  appearance: none;
+  background-color: $white_fff;
+  background-image: none;
+  resize: none;
+  @include mq("md") {
+    height: rem(124);
+  }
+}
+
+.form-textarea textarea:focus {
+  border: 1px solid #ccc;
+  box-shadow: none;
+  outline: none;
+}

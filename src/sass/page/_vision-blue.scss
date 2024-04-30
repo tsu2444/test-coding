@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.vision-blue__inner {
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  @include mq("md") {
+    max-width: $inner + strip-unit($padding-pc) * 2;
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+  }
+}
+
+.vision-blue__bg {
+  background-color: $blue_1F648D;
+}
+
+.vision__blue-content {
+  padding: rem(89) rem(6) rem(81);
+  @include mq("md") {
+    padding-top: rem(80);
+    padding-bottom: rem(112);
+  }
+}
+
+.vision-blue__logo {
+  margin: rem(64) auto 0;
+  width: rem(160);
+  @include mq("md") {
+    margin-top: rem(48);
+    width: rem(140);
+  }
+}

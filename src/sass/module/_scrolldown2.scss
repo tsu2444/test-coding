@@ -1,0 +1,100 @@
+@use "global" as *;
+
+/*スクロールダウン全体の場所*/
+.scrolldown2 {
+  width: 96px;
+  height: 92px;
+  /*描画位置※位置は適宜調整してください*/
+  position: absolute;
+  bottom: 34px;
+  left: 45.5%;
+  @include mq("md") {
+    left: 46.5%;
+  }
+}
+
+/*Scrollテキストの描写*/
+.scrolldown2 span {
+  width: rem(101);
+  position: absolute;
+  top: 36%;
+  left: 0;
+  /*テキストの形状*/
+  color: $white_fff;
+  font-size: rem(12);
+  letter-spacing: 0.02em;
+}
+
+/* 丸の描写 */
+.scrolldown2:before {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  left: 40%;
+  /*丸の形状*/
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid $white_fff;
+  /*丸の動き1.6秒かけて透過し、永遠にループ*/
+  animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
+  @include mq("lg") {
+    left: 47%;
+  }
+}
+
+/*下からの距離が変化して丸の全体が上から下に動く*/
+@keyframes circlemove {
+  0% {
+    bottom: 92px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+
+/*上から下にかけて丸が透過→不透明→透過する*/
+@keyframes cirlemovehide {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  34% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  59% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* 線の描写 */
+.scrolldown2:after {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  left: 42%;
+  /*線の形状*/
+  width: 1px;
+  height: 92px;
+  //   background: $gray_7070;
+  background: linear-gradient(to bottom, $gray_7070 0%, $gray_7070 30%, transparent 30%, transparent 60%, $gray_7070 60%, $gray_7070 100%);
+  @include mq("lg") {
+    left: 50%;
+  }
+}

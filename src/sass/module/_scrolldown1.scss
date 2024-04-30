@@ -1,0 +1,71 @@
+@use "global" as *;
+
+.scrolldown1 {
+  /*描画位置※位置は適宜調整してください*/
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: rem(40);
+  /*全体の高さ*/
+  height: rem(50);
+  z-index: 500;
+  width: rem(96);
+  @include mq("md") {
+    bottom: rem(37);
+  }
+}
+
+/*Scrollテキストの描写*/
+.scrolldown1 span {
+  /*描画位置*/
+  width: rem(100);
+  width: fit-content;
+  position: absolute;
+  left: -5%;
+  top: rem(-18);
+  /*テキストの形状*/
+  color: $white_fff;
+  font-size: rem(12);
+  letter-spacing: 0.05em;
+  @include mq("md") {
+    top: rem(-6);
+    left: 0;
+    letter-spacing: normal;
+  }
+}
+
+.scrolldown1::after {
+  content: "";
+  position: absolute;
+  top: rem(10);
+  left: 50%;
+  transform: translateX(-50%);
+  height: rem(20);
+  width: rem(20);
+  background-image: url(../../assets/images/scroll.png);
+  background-position: center;
+  background-size: contain; /* cover から contain に変更 */
+  background-repeat: no-repeat;
+  animation: pathmove 1.5s ease-in-out infinite;
+  opacity: 0;
+  @include mq("md") {
+  }
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes pathmove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+  30% {
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 50px;
+    opacity: 0;
+  }
+}

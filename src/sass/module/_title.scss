@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.title {
+  text-align: center;
+  color: $blue_1F648D;
+  font-size: rem(16);
+  font-weight: bold;
+  letter-spacing: 0.35em;
+  padding-bottom: rem(6);
+  line-height: calc(24 / 16);
+  position: relative;
+  text-transform: uppercase;
+  @include mq("md") {
+    padding-bottom: rem(9);
+  }
+}
+
+.title.title--white {
+  color: $white_fff;
+}
+
+.title::after {
+  position: absolute;
+  content: "";
+  height: rem(1);
+  width: rem(41);
+  background-color: $black_666;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.title.title--white::after {
+  background-color: $gray_EAEAEA;
+}
+
+.title__sub {
+  text-align: center;
+  color: $black_333;
+  font-size: rem(28);
+  font-weight: bold;
+  line-height: calc(27 / 28);
+  letter-spacing: 0.1em;
+  @include mq("md") {
+    font-size: rem(32);
+  }
+}
