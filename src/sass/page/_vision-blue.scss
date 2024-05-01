@@ -18,10 +18,16 @@
 }
 
 .vision__blue-content {
+  margin: 0 auto;
+  max-width: 500px;
   padding: rem(89) rem(6) rem(81);
   @include mq("md") {
+    max-width: 600px;
     padding-top: rem(80);
     padding-bottom: rem(112);
+  }
+  @include mq("lg") {
+    max-width: 100%;
   }
 }
 

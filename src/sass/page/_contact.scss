@@ -1,11 +1,11 @@
 @use "global" as *;
 
 .contact__layout {
-  margin-top: rem(87);
+  margin-top: rem(80);
   padding: rem(80) 0 rem(72);
   background-color: $blue_EBF5FF;
   @include mq("md") {
-    margin-top: rem(79);
+    margin-top: rem(76);
     padding-top: rem(77);
     padding-bottom: rem(119);
   }
@@ -20,7 +20,7 @@
 }
 
 .contact__title-sub {
-  margin-top: rem(20);
+  margin-top: rem(17);
 }
 
 .contact__title-sub.title__sub {
@@ -56,8 +56,10 @@
 }
 
 .contact__form-wrap {
-  margin-top: rem(64);
+  margin-top: rem(69);
   @include mq("md") {
     margin-top: rem(83);
   }
 }
+
+

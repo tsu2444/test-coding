@@ -9,7 +9,7 @@
   /*全体の高さ*/
   height: rem(50);
   z-index: 500;
-  width: rem(96);
+  width: rem(100);
   @include mq("md") {
     bottom: rem(37);
   }
@@ -18,15 +18,15 @@
 /*Scrollテキストの描写*/
 .scrolldown1 span {
   /*描画位置*/
-  width: rem(100);
+  width: rem(101);
   width: fit-content;
   position: absolute;
-  left: -5%;
-  top: rem(-18);
+  left: 2%;
+  top: rem(-16);
   /*テキストの形状*/
   color: $white_fff;
   font-size: rem(12);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   @include mq("md") {
     top: rem(-6);
     left: 0;

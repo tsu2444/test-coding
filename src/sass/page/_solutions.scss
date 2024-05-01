@@ -29,7 +29,7 @@
 .solutions__title-sub {
   margin-top: rem(25);
   @include mq("md") {
-    margin-top: rem(22);
+    margin-top: rem(18);
   }
 }
 
@@ -37,6 +37,7 @@
   margin: rem(79) auto 0;
   max-width: rem(350);
   @include mq("md") {
+    margin-top: rem(83);
     max-width: 600px;
   }
   @include mq("lg") {

@@ -90,7 +90,7 @@
 .header__nav-item:not(:first-child) {
   margin-left: rem(20);
   @include mq("lg") {
-    margin-left: rem(42);
+    margin-left: rem(43);
   }
 }
 
@@ -103,20 +103,20 @@
     margin-left: rem(50);
   }
   @media (min-width: 1350px) {
-    margin-left: rem(200);
+    margin-left: rem(201);
   }
 }
 
 .header__nav-item__link {
   position: relative; /* 親要素を基準に ::after を配置するために必要 */
-  padding-top: rem(71);
+  padding-top: rem(69);
   height: inherit;
   display: flex;
   align-items: normal;
   color: $white_fff;
   font-size: rem(14);
   line-height: calc(20 / 14);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.1em;
   font-weight: $regular;
   text-transform: uppercase;
 }

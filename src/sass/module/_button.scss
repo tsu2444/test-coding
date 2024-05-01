@@ -42,7 +42,7 @@
 .button__link {
   display: block;
   width: 100%;
-  padding: rem(5) rem(24) rem(7);
+  padding: rem(5) rem(20) rem(6);
   background-color: $yellow_FAC130;
   font-size: rem(14);
   letter-spacing: 0.1em;
@@ -50,6 +50,7 @@
   color: $white_fff;
   border-radius: rem(4);
   transition: 0.3s background-color, 0.3s color;
+  text-transform: uppercase;
 }
 
 .button.button--submit .button__link {

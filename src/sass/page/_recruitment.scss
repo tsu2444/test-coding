@@ -2,7 +2,7 @@
 
 .recruitment__layout {
   margin-top: rem(100);
-  padding-bottom: rem(56);
+  padding-bottom: rem(64);
   position: relative;
   @include mq("md") {
     margin-top: rem(87);
@@ -33,15 +33,18 @@
 }
 
 .recruitment__title-sub {
-  margin-top: rem(19);
+  margin-top: rem(17);
+  @include mq("md") {
+    margin-top: rem(15);
+  }
 }
 
 .recruitment__content {
-  margin: rem(56) auto 0;
+  margin: rem(58) auto 0;
   max-width: 500px;
   @include mq("md") {
     max-width: 600px;
-    margin: rem(57) auto 0;
+    margin: rem(59) auto 0;
   }
   @include mq("lg") {
     max-width: rem(1004);
@@ -67,22 +70,30 @@
   @include mq("md") {
     display: flex;
     align-items: center;
+    width: 154px;
+  }
+  @include mq("lg") {
     width: calc((154 / 1004) * 100%);
   }
 }
 
 .recruitment__name:not(:first-child) {
   margin-top: rem(4);
+  @include mq("md") {
+    margin-top: rem(2);
+  }
 }
 
 .recruitment__disc {
   background-color: $white_fff;
-  padding: rem(10) rem(16) rem(6);
+  padding: rem(8) rem(16) rem(8);
   font-size: rem(14);
   line-height: calc(24 / 14);
   font-weight: $regular;
-  font-family: "Noto Sans JP";
   @include mq("md") {
+    width: calc(100% - 154px);
+  }
+  @include mq("lg") {
     width: calc((850 / 1004) * 100%);
   }
 }
@@ -96,6 +107,13 @@
   @include mq("md") {
     padding-top: rem(21);
     padding-bottom: rem(21);
+  }
+}
+
+.recruitment__disc.recruitment__disc--large13 {
+  @include mq("md") {
+    padding-top: rem(13);
+    padding-bottom: rem(13);
   }
 }
 

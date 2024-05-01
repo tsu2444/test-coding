@@ -30,7 +30,7 @@
   @include mq("md") {
     top: 52%;
     left: auto;
-    right: rem(-38);
+    right: rem(-37);
     transform: translateY(-50%) rotate(-90deg);
   }
 }
@@ -38,14 +38,14 @@
 .solutions-card:nth-child(2n):after {
   @include mq("md") {
     top: auto;
-    left: -35px;
+    left: -30px;
     transform: rotate(45deg);
-    bottom: -50px;
+    bottom: -40px;
   }
   @include mq("lg") {
     top: 52%;
     left: auto;
-    right: rem(-38);
+    right: rem(-35);
     transform: translateY(-50%) rotate(-90deg);
   }
 }

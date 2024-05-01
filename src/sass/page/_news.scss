@@ -2,9 +2,10 @@
 
 .news__layout {
   margin-top: rem(-19);
-  padding-bottom: rem(117);
+  padding-bottom: rem(115);
   @include mq("md") {
-    padding-bottom: rem(145);
+    margin-top: rem(-23);
+    padding-bottom: rem(143);
   }
 }
 
@@ -15,9 +16,10 @@
   }
 }
 
-.news__title-sub {
-  margin-top: rem(24);
-  letter-spacing: 0.25em;
+.news__title-sub.title__sub {
+  margin-top: rem(20);
+  letter-spacing: 0.1em;
+  font-size: rem(32);
 }
 
 .news__content {
@@ -27,7 +29,7 @@
   max-width: 500px;
   @include mq("md") {
     width: 100%;
-    margin-top: rem(58);
+    margin-top: rem(63);
     max-width: 600px;
   }
   @include mq("lg") {
@@ -36,7 +38,7 @@
 }
 
 .news__item {
-  padding: rem(15) rem(30) rem(25);
+  padding: rem(14) rem(30) rem(29) rem(28);
   border-top: 1px solid $blue_EBF5FF;
   border-bottom: 1px solid $blue_EBF5FF;
   @include mq("md") {
@@ -51,7 +53,7 @@
 .news__item:not(:first-child) {
   margin-top: rem(20);
   @include mq("md") {
-    margin-top: rem(17);
+    margin-top: rem(19);
   }
 }
 
@@ -66,15 +68,15 @@
   font-size: rem(12);
   font-weight: $medium;
   line-height: calc(17 / 12);
-  letter-spacing: 0.09em;
+  letter-spacing: 0.2em;
   color: $gray_999;
 }
 
 .news__item-text {
-  margin-top: rem(10);
+  margin-top: rem(7);
   font-size: rem(14);
   line-height: calc(20 / 14);
-  letter-spacing: 0.09em;
+  letter-spacing: 0.1em;
   color: $blue_1F648D;
   overflow: hidden;
   display: -webkit-box;
@@ -82,7 +84,7 @@
   -webkit-line-clamp: 3; /* 行数を指定 */
   @include mq("md") {
     margin-top: 0;
-    margin-left: rem(40);
-    letter-spacing: 0.11em;
+    margin-left: rem(38);
+    letter-spacing: 0.1em;
   }
 }
